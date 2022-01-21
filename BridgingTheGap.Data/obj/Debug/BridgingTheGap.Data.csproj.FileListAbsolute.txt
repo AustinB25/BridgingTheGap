@@ -1,0 +1,17 @@
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\bin\Debug\BridgingTheGap.Data.dll.config
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\bin\Debug\BridgingTheGap.Data.dll
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\bin\Debug\BridgingTheGap.Data.pdb
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\bin\Debug\EntityFramework.dll
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\bin\Debug\EntityFramework.xml
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\BridgingTheGap.Data.csproj.AssemblyReference.cache
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\BridgingTheGap.Data.csproj.CoreCompileInputs.cache
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\BridgingTheGap.Data.dll
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\BridgingTheGap.Data.pdb
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\BridgingTheGap.Data.Migrations.GuidAdded.resources
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\BridgingTheGap.Data.csproj.GenerateResource.cache

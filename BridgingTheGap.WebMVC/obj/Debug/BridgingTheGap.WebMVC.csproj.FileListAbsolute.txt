@@ -108,4 +108,9 @@ C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\Micr
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\obj\Debug\BridgingTheGap.WebMVC.dll
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\obj\Debug\BridgingTheGap.WebMVC.pdb
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Models.dll
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Services.dll
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Models.pdb
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Services.pdb
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Services.dll.config
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\obj\Debug\BridgingTheGap.WebMVC.csproj.CopyComplete

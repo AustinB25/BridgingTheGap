@@ -237,12 +237,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Tutor\Index.cshtml" />
+    <Content Include="Views\Tutor\Create.cshtml" />
+    <Content Include="Views\Tutor\Details.cshtml" />
+    <Content Include="Views\Tutor\Delete.cshtml" />
+    <Content Include="Views\Tutor\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Student\" />
     <Folder Include="Views\Subject\" />
-    <Folder Include="Views\Tutor\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -261,6 +265,14 @@
     <ProjectReference Include="..\BridgingTheGap.Data\BridgingTheGap.Data.csproj">
       <Project>{9E774CF7-5EAD-4274-9675-44DDC23D91A6}</Project>
       <Name>BridgingTheGap.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BridgingTheGap.Models\BridgingTheGap.Models.csproj">
+      <Project>{97D02576-AA90-4EEC-AB75-925F531F72AF}</Project>
+      <Name>BridgingTheGap.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BridgingTheGap.Services\BridgingTheGap.Services.csproj">
+      <Project>{40EDA7E3-65C4-45EA-86AC-D297827BAD6F}</Project>
+      <Name>BridgingTheGap.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

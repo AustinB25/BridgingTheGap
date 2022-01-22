@@ -1,4 +1,4 @@
-﻿using BridgingTheGap.Data;
+﻿ using BridgingTheGap.Data;
 using BridgingTheGap.Models;
 using BridgingTheGap.Services;
 using Microsoft.AspNet.Identity;

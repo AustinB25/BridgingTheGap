@@ -59,6 +59,10 @@
     <Compile Include="Migrations\202201210320185_GuidAdded.Designer.cs">
       <DependentUpon>202201210320185_GuidAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201221435412_DataBaseUpdate.cs" />
+    <Compile Include="Migrations\202201221435412_DataBaseUpdate.Designer.cs">
+      <DependentUpon>202201221435412_DataBaseUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
@@ -72,6 +76,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202201210320185_GuidAdded.resx">
       <DependentUpon>202201210320185_GuidAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201221435412_DataBaseUpdate.resx">
+      <DependentUpon>202201221435412_DataBaseUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

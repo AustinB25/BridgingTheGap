@@ -88,8 +88,7 @@ namespace BridgingTheGap.Services
                 var entity =
                         ctx
                             .Tutors
-                            .Single(e => e.TutorId == model.TutorId && model.OwnerId == _userId);
-                entity.TutorId = model.TutorId;
+                            .Single(e => e.TutorId == model.TutorId && model.OwnerId == _userId);               
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
                 return ctx.SaveChanges() == 1;                

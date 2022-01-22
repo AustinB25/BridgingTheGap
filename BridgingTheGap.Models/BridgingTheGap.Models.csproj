@@ -43,6 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentCreate.cs" />
+    <Compile Include="StudentDetail.cs" />
+    <Compile Include="StudentEdit.cs" />
+    <Compile Include="StudentListItem.cs" />
     <Compile Include="TutorCreate.cs" />
     <Compile Include="TutorDetails.cs" />
     <Compile Include="TutorEdit.cs" />

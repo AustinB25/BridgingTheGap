@@ -242,10 +242,14 @@
     <Content Include="Views\Tutor\Details.cshtml" />
     <Content Include="Views\Tutor\Delete.cshtml" />
     <Content Include="Views\Tutor\Edit.cshtml" />
+    <Content Include="Views\Student\Create.cshtml" />
+    <Content Include="Views\Student\Details.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Student\Edit.cshtml" />
+    <Content Include="Views\Student\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Student\" />
     <Folder Include="Views\Subject\" />
   </ItemGroup>
   <ItemGroup>

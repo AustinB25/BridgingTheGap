@@ -25,12 +25,14 @@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("View Tutors", "Index", "Tutor")</li>
-
                     }
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("View Students", "Index", "Student")</li>
-
+                    }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("View Subjects", "Index", "Subject")</li>
                     }
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>

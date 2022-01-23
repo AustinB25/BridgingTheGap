@@ -47,6 +47,10 @@
     <Compile Include="StudentDetail.cs" />
     <Compile Include="StudentEdit.cs" />
     <Compile Include="StudentListItem.cs" />
+    <Compile Include="SubjectCreate.cs" />
+    <Compile Include="SubjectDetail.cs" />
+    <Compile Include="SubjectEdit.cs" />
+    <Compile Include="SubjectListItem.cs" />
     <Compile Include="TutorCreate.cs" />
     <Compile Include="TutorDetails.cs" />
     <Compile Include="TutorEdit.cs" />

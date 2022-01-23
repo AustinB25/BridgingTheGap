@@ -12,7 +12,6 @@ namespace BridgingTheGap.WebMVC.Controllers
 {
     public class TutorController : Controller
     {
-        private ApplicationDbContext _ctx = new ApplicationDbContext();
         // GET: Tutor
         public ActionResult Index()
         {

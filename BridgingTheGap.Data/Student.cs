@@ -14,11 +14,15 @@ namespace BridgingTheGap.Data
         [Required]
         public Guid OwnerId { get; set; }
         [Required]
-        public string  FirstName { get; set; }
+        public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
         [Display(Name = " Full Name")]
         public string FullName { get { return $"{FirstName } {LastName}"; } }
-        public virtual IEnumerable<Subject> Subjects { get; set; } = new List<Subject>();
+        public virtual IEnumerable<Subject> Subjects { get; set; }
+        public Student()
+        {
+            this.Subjects = new HashSet<Subject>();
+        }
     }
 }

@@ -4,6 +4,7 @@ using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -40,7 +41,7 @@ namespace BridgingTheGap.WebMVC.Controllers
         }
         //Get: Subject/Details/{id}
         public ActionResult Details(int id)
-        {
+        {           
             var service = CreateSubjectService();
             var model = service.GetSubjectById(id);
             return View(model);

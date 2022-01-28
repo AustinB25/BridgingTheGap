@@ -56,5 +56,11 @@
     <Compile Include="TutorEdit.cs" />
     <Compile Include="TutorListItem.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BridgingTheGap.Data\BridgingTheGap.Data.csproj">
+      <Project>{9E774CF7-5EAD-4274-9675-44DDC23D91A6}</Project>
+      <Name>BridgingTheGap.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

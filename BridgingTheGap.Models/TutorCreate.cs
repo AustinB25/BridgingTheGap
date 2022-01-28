@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BridgingTheGap.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace BridgingTheGap.Models
         [Display(Name = "Last Name")]
         [MinLength(2, ErrorMessage = " Your name must be at least two characters. ")]
         [MaxLength(64, ErrorMessage = " Your name can not be longer than 64 characters")]
-        public string LastName { get; set; }
+        public string LastName { get; set; }        
+        public virtual Subject Subject { get; set; }
     }
 }

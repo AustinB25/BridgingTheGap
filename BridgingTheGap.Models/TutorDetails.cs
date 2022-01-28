@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BridgingTheGap.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,8 +16,10 @@ namespace BridgingTheGap.Models
         [Display(Name = "First name:")]
         public string FirstName { get; set; }
         [Display(Name = "Last name:")]
-        public string LastName { get; set; }       
+        public string LastName { get; set; }
+        [Display(Name = "Tutor:")]
+        public string  FullName { get { return $"{FirstName}{ LastName}"; } }
         [Display(Name = "Subjects")]
-        public int NumberOfSubjects { get; set; }
+        public List<Subject> Subjects { get; set; }
     }
 }

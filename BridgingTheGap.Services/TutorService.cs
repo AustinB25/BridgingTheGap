@@ -15,17 +15,20 @@ namespace BridgingTheGap.Services
         {
             _userId = userId;
         }
-        public bool CreateTutor(TutorCreate model)
+        public bool CreateTutor(int subjectId, TutorCreate model)
         {
             var tutorModel =
                 new Tutor
                 {
                     OwnerId = _userId,
                     FirstName = model.FirstName,
-                    LastName = model.LastName
+                    LastName = model.LastName, 
+                    
                 };
             using (var ctx = new ApplicationDbContext())
             {
+                var subjectEntity = ctx.Subjects.Single(e=> e.OwnerId == _userId && e.SubjectId == subjectId);
+                tutorModel.Subjects.Add(subjectEntity);
                 ctx.Tutors.Add(tutorModel);
                 return ctx.SaveChanges() == 1;
             }
@@ -36,8 +39,7 @@ namespace BridgingTheGap.Services
             {
                 var query =
                     ctx
-                        .Tutors
-                        .Where(e => e.OwnerId == _userId)
+                        .Tutors                        
                         .Select(
                         e =>
                             new TutorListItem
@@ -65,7 +67,7 @@ namespace BridgingTheGap.Services
                         FirstName = entity.FirstName,
                         LastName = entity.LastName,
                         OwnerId = entity.OwnerId,
-                        NumberOfSubjects = entity.Subjects.Count()
+                        Subjects = entity.Subjects.ToList()
                     };
             }
         }
@@ -92,6 +94,22 @@ namespace BridgingTheGap.Services
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
                 return ctx.SaveChanges() == 1;                
+            }
+        }
+        public bool AddSubjectToTutor(int subjectId, int tutorId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var tutorEntity =
+                    ctx
+                    .Tutors
+                    .Single(e => e.OwnerId == _userId && e.TutorId == tutorId);
+                var subjectEntity =
+                    ctx
+                    .Subjects
+                    .Single(e => e.OwnerId == _userId && e.SubjectId == subjectId);
+                tutorEntity.Subjects.Add(subjectEntity);
+                return ctx.SaveChanges() == 1;
             }
         }
     }

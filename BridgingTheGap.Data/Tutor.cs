@@ -19,6 +19,6 @@ namespace BridgingTheGap.Data
         public string LastName { get; set; }
         [Display(Name = " Full Name")]
         public string FullName { get { return $"{FirstName } {LastName}"; } }
-        public virtual IEnumerable<Subject> Subjects { get; set; } = new List<Subject>();
+        public virtual ICollection<Subject> Subjects { get; set; } = new HashSet<Subject>();
     }
 }

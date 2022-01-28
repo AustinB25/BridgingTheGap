@@ -4,3 +4,12 @@ C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\obj\Debu
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\obj\Debug\BridgingTheGap.Models.csproj.CoreCompileInputs.cache
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\obj\Debug\BridgingTheGap.Models.dll
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\obj\Debug\BridgingTheGap.Models.pdb
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\bin\Debug\BridgingTheGap.Data.dll
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\bin\Debug\EntityFramework.dll
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\bin\Debug\BridgingTheGap.Data.pdb
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\bin\Debug\BridgingTheGap.Data.dll.config
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\bin\Debug\EntityFramework.xml

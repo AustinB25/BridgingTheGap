@@ -106,11 +106,55 @@ namespace BridgingTheGap.WebMVC.Controllers
             }
             return View(editModel);
         }
+        //Get: Student/AddSubjectToStudent/{id}
+        [HttpGet]
+        public ActionResult AddSubjectToStudent(int id)
+        {
+            //Create Subect service to interact with subect data table
+            var subService = CreateSubjectService();
+            //Create SelectList for the Subjects and put them in the ViewBag foir the view
+            ViewBag.SubjectId = new SelectList(subService.GetSubjects().ToList(), "SubjectId", "Name");
+            //Create student service to interact with tutor data table
+            var studentService = CreateStudentService();
+            //Go get the student we are going to add a subject to using service
+            var student = studentService.GetStudentById(id);
+            var entity =
+                new StudentDetail
+                {
+                    StudentId = student.StudentId,
+                    FirstName = student.FirstName,
+                    LastName = student.LastName,
+                    Subjects = student.Subjects,
+                    OwnerId = student.OwnerId                 
+                };
+            //Return the AddSubjectToStudent View with the studentDetail
+            return View(entity);
+        }
+        //Post: Tutor/AddSubjectToStudent/{id}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddSubjectToStudent(int subjectId, StudentDetail studentModel)
+        {
+            if (!ModelState.IsValid) return View(studentModel);
+            var studentService = CreateStudentService();
+            if (studentService.AddSubjectToStudent(subjectId, studentModel.StudentId))
+            {
+                TempData["SaveResult"] = " The subject was added to the student ";
+                return RedirectToAction("Index", "Student");
+            }
+            return View(studentModel);
+        }
         public StudentService CreateStudentService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var sService = new StudentService(userId);
             return sService;
+        }
+        private SubjectService CreateSubjectService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var subjectService = new SubjectService(userId);
+            return subjectService;
         }
     }
 }

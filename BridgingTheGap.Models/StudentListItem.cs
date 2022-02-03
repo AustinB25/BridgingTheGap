@@ -12,7 +12,9 @@ namespace BridgingTheGap.Models
         public int StudentId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        [Display(Name = "Student")]
+        [Display(Name = "Student: ")]
         public string FullName { get { return $"{FirstName} { LastName}"; } }
+        [Display (Name = "# of subjects: ")]
+        public int NumberOfSubjects { get; set; }
     }
 }

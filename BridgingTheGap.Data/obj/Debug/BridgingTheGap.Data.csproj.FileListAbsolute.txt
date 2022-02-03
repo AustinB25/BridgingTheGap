@@ -19,3 +19,4 @@ C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\BridgingTheGap.Data.Migrations.ForeignKeyChange.resources
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\BridgingTheGap.Data.Migrations.Update24.resources
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\BridgingTheGap.Data.Migrations.Update25.resources
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\BridgingTheGap.Data.Migrations.Update26.resources

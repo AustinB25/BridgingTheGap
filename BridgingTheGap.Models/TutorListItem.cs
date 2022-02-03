@@ -9,7 +9,7 @@ namespace BridgingTheGap.Models
 {
     public class TutorListItem
     {
-        public int TutorId { get; set; }
+        public int TutorId { get; set; }        
         public string FirstName { get; set; }
         public string LastName { get; set; }
         [Display(Name = "Tutor Name")]

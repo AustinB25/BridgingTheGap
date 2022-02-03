@@ -24,6 +24,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.FullName)
             </th>
+            <th>@Html.DisplayNameFor(model => model.NumberOfSubjects)</th>
         </tr>
         @foreach (var item in Model)
         {
@@ -35,6 +36,10 @@
                     @Html.DisplayFor(modelItem => item.FullName)
                 </td>
                 <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfSubjects)
+                </td>
+                <td>
+                    @Html.ActionLink("Add Subject", "AddSubjectToStudent", new { id = item.StudentId}) |
                     @Html.ActionLink("Edit", "Edit", new { id = item.StudentId }) |
                     @Html.ActionLink("Details", "Details", new { id = item.StudentId }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.StudentId })

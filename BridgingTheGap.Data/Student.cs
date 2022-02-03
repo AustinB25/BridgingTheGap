@@ -19,7 +19,7 @@ namespace BridgingTheGap.Data
         public string LastName { get; set; }
         [Display(Name = " Full Name")]
         public string FullName { get { return $"{FirstName } {LastName}"; } }
-        public virtual IEnumerable<Subject> Subjects { get; set; }
+        public virtual ICollection<Subject> Subjects { get; set; }
         public Student()
         {
             this.Subjects = new HashSet<Subject>();

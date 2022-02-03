@@ -44,7 +44,8 @@ namespace BridgingTheGap.Services
                     {
                         StudentId = e.StudentId,
                         FirstName = e.FirstName,
-                        LastName = e.LastName
+                        LastName = e.LastName,
+                        NumberOfSubjects = e.Subjects.Count
                     });
                 return query.ToArray();
             }
@@ -61,9 +62,10 @@ namespace BridgingTheGap.Services
                     new StudentDetail
                     {
                         StudentId = entity.StudentId,
+                        OwnerId = entity.OwnerId,
                         FirstName = entity.FirstName,
                         LastName = entity.LastName,
-                        NumberOfSubjects = entity.Subjects.Count()
+                        Subjects = entity.Subjects
                     };
                 return model;
             }
@@ -90,6 +92,22 @@ namespace BridgingTheGap.Services
                     .Single(e => e.StudentId == model.StudentId && e.OwnerId == _userId);
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        public bool AddSubjectToStudent(int subjectId, int studentId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var studentEntity =
+                    ctx
+                    .Students
+                    .Single(e => e.StudentId == studentId);
+                var subjectEntity =
+                    ctx
+                    .Subjects
+                    .Single(e => e.SubjectId == subjectId);
+                studentEntity.Subjects.Add(subjectEntity);
                 return ctx.SaveChanges() == 1;
             }
         }

@@ -108,7 +108,8 @@ namespace BridgingTheGap.Services
                     .Subjects
                     .Single(e => e.SubjectId == subjectId);
                 studentEntity.Subjects.Add(subjectEntity);
-                return ctx.SaveChanges() == 1;
+                subjectEntity.Students.Add(studentEntity); 
+                return ctx.SaveChanges() >= 1;
             }
         }
     }

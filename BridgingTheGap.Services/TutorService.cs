@@ -124,7 +124,8 @@ namespace BridgingTheGap.Services
                     .Subjects
                     .Single(e => e.OwnerId == _userId && e.SubjectId == subjectId);
                 tutorEntity.Subjects.Add(subjectEntity);
-                return ctx.SaveChanges() == 1;
+                subjectEntity.Tutors.Add(tutorEntity);
+                return ctx.SaveChanges() >= 1;
             }
         }
     }

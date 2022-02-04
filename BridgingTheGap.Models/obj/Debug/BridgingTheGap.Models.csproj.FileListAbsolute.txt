@@ -13,3 +13,4 @@ C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\bin\Debu
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\bin\Debug\EntityFramework.xml
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Models\obj\Debug\BridgingTheGap.Models.csproj.CopyComplete

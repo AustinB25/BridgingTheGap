@@ -1,4 +1,5 @@
-﻿using BridgingTheGap.Models;
+﻿using BridgingTheGap.Data;
+using BridgingTheGap.Models;
 using BridgingTheGap.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -110,10 +111,11 @@ namespace BridgingTheGap.WebMVC.Controllers
         [HttpGet]
         public ActionResult AddSubjectToStudent(int id)
         {
+            ApplicationDbContext ctx = new ApplicationDbContext();
             //Create Subect service to interact with subect data table
             var subService = CreateSubjectService();
             //Create SelectList for the Subjects and put them in the ViewBag foir the view
-            ViewBag.SubjectId = new SelectList(subService.GetSubjects().ToList(), "SubjectId", "Name");
+            ViewBag.SubjectId = new SelectList(ctx.Subjects, "SubjectId", "Name");
             //Create student service to interact with tutor data table
             var studentService = CreateStudentService();
             //Go get the student we are going to add a subject to using service
@@ -133,11 +135,11 @@ namespace BridgingTheGap.WebMVC.Controllers
         //Post: Tutor/AddSubjectToStudent/{id}
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult AddSubjectToStudent(int subjectId, StudentDetail studentModel)
+        public ActionResult AddSubjectToStudent(StudentDetail studentModel)
         {
             if (!ModelState.IsValid) return View(studentModel);
             var studentService = CreateStudentService();
-            if (studentService.AddSubjectToStudent(subjectId, studentModel.StudentId))
+            if (studentService.AddSubjectToStudent(studentModel.SubjectId, studentModel.StudentId))
             {
                 TempData["SaveResult"] = " The subject was added to the student ";
                 return RedirectToAction("Index", "Student");

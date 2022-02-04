@@ -14,6 +14,7 @@ namespace BridgingTheGap.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string FullName { get { return $"{FirstName} { LastName}"; } }
+        public int SubjectId { get; set; }
         public ICollection<Subject> Subjects { get; set; }
     }
 }

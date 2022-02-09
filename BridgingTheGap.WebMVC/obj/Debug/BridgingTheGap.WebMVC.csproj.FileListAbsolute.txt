@@ -1,5 +1,3 @@
-C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\obj\Debug\BridgingTheGap.WebMVC.csproj.AssemblyReference.cache
-C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\obj\Debug\BridgingTheGap.WebMVC.csproj.CoreCompileInputs.cache
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.WebMVC.dll.config
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.WebMVC.dll
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.WebMVC.pdb
@@ -54,6 +52,8 @@ C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\rosl
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\Antlr3.Runtime.dll
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Data.dll
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Models.dll
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Services.dll
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\EntityFramework.dll
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\EntityFramework.SqlServer.dll
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\Microsoft.AspNet.Identity.Core.dll
@@ -82,6 +82,9 @@ C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\Syst
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\WebGrease.dll
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Data.pdb
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Data.dll.config
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Models.pdb
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Services.pdb
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Services.dll.config
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\System.Web.Helpers.xml
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\System.Web.Mvc.xml
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\System.Web.Optimization.xml
@@ -106,11 +109,7 @@ C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\Micr
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\obj\Debug\BridgingTheGap.WebMVC.csproj.AssemblyReference.cache
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\obj\Debug\BridgingTheGap.WebMVC.csproj.CoreCompileInputs.cache
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\obj\Debug\BridgingTheGap.WebMVC.dll
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\obj\Debug\BridgingTheGap.WebMVC.pdb
-C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Models.dll
-C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Services.dll
-C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Models.pdb
-C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Services.pdb
-C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Services.dll.config
-C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\obj\Debug\BridgingTheGap.WebMVC.csproj.CopyComplete

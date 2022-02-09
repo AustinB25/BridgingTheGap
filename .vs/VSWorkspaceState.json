@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BridgingTheGap.WebMVC",
+    "\\BridgingTheGap.WebMVC\\Content",
+    "\\BridgingTheGap.WebMVC\\Controllers",
+    "\\BridgingTheGap.WebMVC\\Views",
+    "\\BridgingTheGap.WebMVC\\Views\\Home",
+    "\\BridgingTheGap.WebMVC\\Views\\Manage",
+    "\\BridgingTheGap.WebMVC\\Views\\Role",
+    "\\BridgingTheGap.WebMVC\\Views\\Student",
+    "\\BridgingTheGap.WebMVC\\Views\\Tutor"
+  ],
+  "SelectedNode": "\\BridgingTheGap.WebMVC\\Content\\bootstrap.css",
+  "PreviewInSolutionExplorer": false
+}

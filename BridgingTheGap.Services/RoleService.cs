@@ -35,13 +35,8 @@ namespace BridgingTheGap.Services
                 var query =
                     ctx
                     .Roles
-                    .Select(
-                        e =>
-                            new IdentityRole
-                            {
-                                Name = e.Name
-                            });
-                return query.ToList();
+                    .ToList();
+                return query;
             }
         }
     }

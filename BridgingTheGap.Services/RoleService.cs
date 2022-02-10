@@ -24,7 +24,8 @@ namespace BridgingTheGap.Services
                 };
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Roles.Add(role);
+                ctx.Roles.Add(roleEntity);
+                var changes = ctx.SaveChanges();
                 return ctx.SaveChanges() == 1;
             }
         }

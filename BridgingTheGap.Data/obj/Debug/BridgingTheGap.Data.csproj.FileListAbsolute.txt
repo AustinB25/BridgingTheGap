@@ -19,6 +19,5 @@ C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\BridgingTheGap.Data.Migrations.update28.resources
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\BridgingTheGap.Data.csproj.GenerateResource.cache
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\BridgingTheGap.Data.csproj.CoreCompileInputs.cache
-C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\BridgingTheGap.Data.csproj.CopyComplete
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\BridgingTheGap.Data.dll
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Data\obj\Debug\BridgingTheGap.Data.pdb

@@ -245,7 +245,7 @@ a {
 }
 
 a:hover {
-  color: #cccccc;
+  color: #00CCFA;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -3655,7 +3655,7 @@ fieldset:disabled .btn {
 }
 
 .btn-link:hover {
-  color: #cccccc;
+  color: #00CCFA;
 }
 
 .btn-link:disabled, .btn-link.disabled {
@@ -4189,7 +4189,7 @@ fieldset:disabled .btn {
 }
 
 .nav-link:hover, .nav-link:focus {
-  color: #cccccc;
+  color: #00CCFA;
 }
 
 .nav-link.disabled {
@@ -5224,7 +5224,7 @@ fieldset:disabled .btn {
 
 .page-link:focus {
   z-index: 3;
-  color: #cccccc;
+  color: #00CCFA;
   background-color: #e9ecef;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(58, 63, 68, 0.25);

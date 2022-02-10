@@ -8,8 +8,11 @@
 <h2>All Available roles</h2>
 
 
-<p>
+<p class="col-md-6"> 
     @Html.ActionLink("Create New", "Create")
+</p>
+<p class="col-md-6">
+    @Html.ActionLink("Assign Role to User", "RegisterRole", "Account")
 </p>
 @if (TempData.ContainsKey("SaveResult"))
 {
@@ -30,7 +33,7 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                @Html.DisplayFor(Model => item.Name)
             </td>         
         </tr>
     }

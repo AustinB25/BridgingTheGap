@@ -75,6 +75,18 @@
     <Compile Include="Migrations\202201271924012_Update2.5.Designer.cs">
       <DependentUpon>202201271924012_Update2.5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201311125150_Update2.6.cs" />
+    <Compile Include="Migrations\202201311125150_Update2.6.Designer.cs">
+      <DependentUpon>202201311125150_Update2.6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202032257587_update2.7.cs" />
+    <Compile Include="Migrations\202202032257587_update2.7.Designer.cs">
+      <DependentUpon>202202032257587_update2.7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202040042274_update2.8.cs" />
+    <Compile Include="Migrations\202202040042274_update2.8.Designer.cs">
+      <DependentUpon>202202040042274_update2.8.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
@@ -84,6 +96,8 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Scripts\jquery-3.6.0.min.map" />
+    <None Include="Scripts\jquery-3.6.0.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202201210320185_GuidAdded.resx">
@@ -101,6 +115,25 @@
     <EmbeddedResource Include="Migrations\202201271924012_Update2.5.resx">
       <DependentUpon>202201271924012_Update2.5.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201311125150_Update2.6.resx">
+      <DependentUpon>202201311125150_Update2.6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202032257587_update2.7.resx">
+      <DependentUpon>202202032257587_update2.7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202040042274_update2.8.resx">
+      <DependentUpon>202202040042274_update2.8.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.6.0.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

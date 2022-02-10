@@ -18,3 +18,4 @@ C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Services\obj\De
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Services\obj\Debug\BridgingTheGap.Services.csproj.CoreCompileInputs.cache
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Services\obj\Debug\BridgingTheGap.Services.dll
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Services\obj\Debug\BridgingTheGap.Services.pdb
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.Services\obj\Debug\BridgingTheGap.Services.csproj.CopyComplete

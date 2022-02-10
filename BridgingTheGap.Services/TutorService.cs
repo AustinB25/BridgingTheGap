@@ -15,31 +15,45 @@ namespace BridgingTheGap.Services
         {
             _userId = userId;
         }
-        public bool CreateTutor(int subjectId, TutorCreate model)
+        public bool CreateTutor(TutorCreate model)
+        {
+            var tutorModel =
+          new Tutor
+          {
+              OwnerId = _userId,
+              FirstName = model.FirstName,
+              LastName = model.LastName,
+
+          };
+            using (var ctx = new ApplicationDbContext())
+            {
+                ctx.Tutors.Add(tutorModel);
+                return ctx.SaveChanges() == 1;
+            }
+        }
+       /* public bool CreateTutorWithSubject(int subjectId, TutorCreate model)
         {
             var tutorModel =
                 new Tutor
                 {
                     OwnerId = _userId,
                     FirstName = model.FirstName,
-                    LastName = model.LastName, 
-                    
+                    LastName = model.LastName,
+
                 };
             using (var ctx = new ApplicationDbContext())
             {
-                var subjectEntity = ctx.Subjects.Single(e=> e.OwnerId == _userId && e.SubjectId == subjectId);
-                tutorModel.Subjects.Add(subjectEntity);
                 ctx.Tutors.Add(tutorModel);
                 return ctx.SaveChanges() == 1;
             }
-        }
+        }*/
         public IEnumerable<TutorListItem> GetAllTutors()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
-                        .Tutors                        
+                        .Tutors                       
                         .Select(
                         e =>
                             new TutorListItem
@@ -47,19 +61,20 @@ namespace BridgingTheGap.Services
 
                                 TutorId = e.TutorId,
                                 FirstName = e.FirstName,
-                                LastName = e.LastName
+                                LastName = e.LastName,
+                                NumberOfSubjects = e.Subjects.Count()
                             });
                 return query.ToArray();
-            }            
+            }
         }
         public TutorDetails GetTutorById(int id)
         {
-            using (var ctx =  new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Tutors
-                        .Single(e => e.TutorId == id && e.OwnerId == _userId);
+                        .Single(e => e.TutorId == id);
                 return
                     new TutorDetails
                     {
@@ -90,10 +105,10 @@ namespace BridgingTheGap.Services
                 var entity =
                         ctx
                             .Tutors
-                            .Single(e => e.TutorId == model.TutorId && model.OwnerId == _userId);               
+                            .Single(e => e.TutorId == model.TutorId && model.OwnerId == _userId);
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
-                return ctx.SaveChanges() == 1;                
+                return ctx.SaveChanges() == 1;
             }
         }
         public bool AddSubjectToTutor(int subjectId, int tutorId)
@@ -103,13 +118,14 @@ namespace BridgingTheGap.Services
                 var tutorEntity =
                     ctx
                     .Tutors
-                    .Single(e => e.OwnerId == _userId && e.TutorId == tutorId);
+                    .Single(e =>  e.TutorId == tutorId);
                 var subjectEntity =
                     ctx
                     .Subjects
                     .Single(e => e.OwnerId == _userId && e.SubjectId == subjectId);
                 tutorEntity.Subjects.Add(subjectEntity);
-                return ctx.SaveChanges() == 1;
+                subjectEntity.Tutors.Add(tutorEntity);
+                return ctx.SaveChanges() >= 1;
             }
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BridgingTheGap.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,8 @@ namespace BridgingTheGap.Models
         public Guid OwnerId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string FullName { get { return $"{FirstName}{ LastName}"; } }
-        public int NumberOfSubjects { get; set; }
+        public string FullName { get { return $"{FirstName} { LastName}"; } }
+        public int SubjectId { get; set; }
+        public ICollection<Subject> Subjects { get; set; }
     }
 }

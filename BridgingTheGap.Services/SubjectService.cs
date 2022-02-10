@@ -35,8 +35,7 @@ namespace BridgingTheGap.Services
             {
                 var query =
                     ctx
-                    .Subjects
-                    .Where(e => e.OwnerId == _userId)
+                    .Subjects                    
                     .Select(
                         e =>
                         new SubjectListItem
@@ -54,7 +53,7 @@ namespace BridgingTheGap.Services
                 var entity =
                     ctx
                     .Subjects
-                    .Single(e => e.SubjectId == id && e.OwnerId == _userId);
+                    .Single(e => e.SubjectId == id);
                 var model =
                     new SubjectDetail
                     {

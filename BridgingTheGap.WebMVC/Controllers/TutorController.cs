@@ -23,22 +23,20 @@ namespace BridgingTheGap.WebMVC.Controllers
 
         //Get: Tutor/Create
         public ActionResult Create()
-        {
-            var subService = CreateSubjectService();
-            ViewBag.SubjectId = new SelectList(subService.GetSubjects().ToList(), "SubjectId", "Name");           
+        {                  
             return View();
         }
         //Post: Tutor/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(int subjectId, TutorCreate model)
+        public ActionResult Create(TutorCreate model)
         {
             //Check that the model state is valid
             if (!ModelState.IsValid) return View(model);
             //Bring in tutor service 
             var tService = CreateTutorService();
             //Check to make sure bool for Create method returns true
-            if (tService.CreateTutor(subjectId, model))
+            if (tService.CreateTutor( model))
             {
                 //If so Save this string in temp data to be taken back to the view
                 TempData["SaveResult"] = "Your tutor was created.";
@@ -118,10 +116,10 @@ namespace BridgingTheGap.WebMVC.Controllers
         {
             //Create Subect service to interact with subect data table
             var subService = CreateSubjectService();
-            //Create SelectList for the Subjects and put them in the ViewBag foir the view
+            //Create SelectList for the Subjects in database and put them in the ViewBag foir the view
             ViewBag.SubjectId = new SelectList(subService.GetSubjects().ToList(), "SubjectId", "Name");
             //Create tutor service to interact with tutor data table
-            var tutorService = CreateTutorService();
+            var tutorService = CreateTutorService();                        
             //Go get the tutor we are going to add a subject to using service
             var tutor = tutorService.GetTutorById(id);
             var entity =
@@ -145,7 +143,7 @@ namespace BridgingTheGap.WebMVC.Controllers
             if (tService.AddSubjectToTutor(subjectId, tutorModel.TutorId))
             {
                 TempData["SaveResult"] = " The subject was added to the tutor ";
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Tutor");
             }
             return View(tutorModel);
         }

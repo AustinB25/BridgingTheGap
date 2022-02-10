@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_BTGLayout.cshtml";
+}
+
+<h2>All Available roles</h2>
+
+
+<p class="col-md-6"> 
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p class="col-md-6">
+    @Html.ActionLink("Assign Role to User", "RegisterRole", "Account")
+</p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+        <button type="button" class=" close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>        
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(Model => item.Name)
+            </td>         
+        </tr>
+    }
+</table>

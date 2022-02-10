@@ -1,0 +1,25 @@
+﻿@model Microsoft.AspNet.Identity.EntityFramework.IdentityRole
+@{
+    ViewBag.Title = "AssignRoleToUser";
+    Layout = "~/Views/Shared/_BTGLayout.cshtml";
+}
+
+<h2>AssigRoleToUser</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Create Role</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.Label("Select Your User Type", new { @class = "col-md-2 control-label" })
+            <div class=" col-md-10">
+                @Html.DropDownList("UserName");
+            </div>
+        </div>
+        <input type="submit" value="Add Role"/>
+    </div>
+        }

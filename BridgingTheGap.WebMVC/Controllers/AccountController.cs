@@ -18,6 +18,7 @@ namespace BridgingTheGap.WebMVC.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ApplicationDbContext _ctx = new ApplicationDbContext();
 
         public AccountController()
         {
@@ -172,7 +173,29 @@ namespace BridgingTheGap.WebMVC.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
-
+        [AllowAnonymous]
+        [HttpGet]
+        public ActionResult RegisterRole()
+        {
+            ViewBag.Name = new SelectList(_ctx.Roles.ToList(), "Name", "Name");
+            ViewBag.UserName = new SelectList(_ctx.Users.ToList(), "UserName", "UserName");
+            return View();
+        }
+        //Post: Account/RegisterRole
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> RegisterRole(RegisterViewModel model, ApplicationUser user)
+        {
+            var userId = _ctx.Users.Where(e => e.UserName == user.UserName).Select(u => u.Id);
+            string updateId = "";
+            foreach(var i in userId)
+            {
+                updateId = i.ToString();
+            }
+            await this.UserManager.AddToRoleAsync(updateId, model.Name);
+            return RedirectToAction("Index", "Roles");
+        }
         //
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]

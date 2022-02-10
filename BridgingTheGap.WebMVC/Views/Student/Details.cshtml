@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Details";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_BTGLayout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -19,22 +19,25 @@
         <dl class="dl-horizontal">
             <dt>
                 @Html.DisplayNameFor(model => model.StudentId)
-            </dt>    
+            </dt>
             <dd>
                 @Html.DisplayFor(model => model.StudentId)
-            </dd>    
+            </dd>
             <dt>
                 @Html.DisplayNameFor(model => model.FullName)
-            </dt>    
+            </dt>
             <dd>
                 @Html.DisplayFor(model => model.FullName)
-            </dd>    
+            </dd>
             <dt>
-                @Html.DisplayNameFor(model => model.NumberOfSubjects)
-            </dt>    
-            <dd>
-                @Html.DisplayFor(model => model.NumberOfSubjects)
-            </dd>    
+                @Html.DisplayNameFor(model => model.Subjects)
+            </dt>
+            @foreach (var s in Model.Subjects)
+            {
+                <dd>
+                    @s.Name
+                </dd>
+            }
         </dl>
     </div>
     <p>

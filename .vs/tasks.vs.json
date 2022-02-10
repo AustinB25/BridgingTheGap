@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-_BTGLayout",
+      "appliesTo": "BridgingTheGap.WebMVC/Views/Shared/_BTGLayout.cshtml",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-_BTGLayout",
+      "appliesTo": "BridgingTheGap.WebMVC/Views/Shared/_BTGLayout.cshtml",
+      "type": "launch"
+    }
+  ]
+}

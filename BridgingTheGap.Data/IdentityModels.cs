@@ -27,6 +27,7 @@ namespace BridgingTheGap.Data
         public DbSet<Tutor> Tutors { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Subject> Subjects { get; set; }
+        
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

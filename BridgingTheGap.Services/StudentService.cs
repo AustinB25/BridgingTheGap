@@ -108,8 +108,25 @@ namespace BridgingTheGap.Services
                     .Subjects
                     .Single(e => e.SubjectId == subjectId);
                 studentEntity.Subjects.Add(subjectEntity);
-                subjectEntity.Students.Add(studentEntity); 
-                return ctx.SaveChanges() >= 1;
+                subjectEntity.Students.Add(studentEntity);                
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        public bool RemoveSubjectFromStudent(int subjectId, int studentId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var studentEntity =
+                    ctx
+                    .Students
+                    .Single(e => e.StudentId == studentId);
+                var subjectEntity =
+                    ctx
+                    .Subjects
+                    .Single(e => e.SubjectId == subjectId);
+                studentEntity.Subjects.Remove(subjectEntity);
+                subjectEntity.Students.Remove(studentEntity);               
+                return ctx.SaveChanges() == 1;
             }
         }
     }

@@ -15,7 +15,7 @@ namespace BridgingTheGap.Models
         [MaxLength(64, ErrorMessage = " Your name can not be longer than 64 characters")]
         public string FirstName { get; set; }
         [Required]
-        [Display(Name = "First Name")]
+        [Display(Name = "Last Name")]
         [MinLength(2, ErrorMessage = " Your name must be at least two characters. ")]
         [MaxLength(64, ErrorMessage = " Your name can not be longer than 64 characters")]
         public string LastName { get; set; }

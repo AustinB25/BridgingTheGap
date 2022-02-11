@@ -47,6 +47,7 @@
     <Compile Include="StudentDetail.cs" />
     <Compile Include="StudentEdit.cs" />
     <Compile Include="StudentListItem.cs" />
+    <Compile Include="StudentRemoveSubject.cs" />
     <Compile Include="SubjectCreate.cs" />
     <Compile Include="SubjectDetail.cs" />
     <Compile Include="SubjectEdit.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="TutorDetails.cs" />
     <Compile Include="TutorEdit.cs" />
     <Compile Include="TutorListItem.cs" />
+    <Compile Include="TutorRemoveSubject.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BridgingTheGap.Data\BridgingTheGap.Data.csproj">

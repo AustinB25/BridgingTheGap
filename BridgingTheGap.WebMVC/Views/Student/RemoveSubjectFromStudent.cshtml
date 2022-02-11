@@ -1,0 +1,33 @@
+﻿@model BridgingTheGap.Models.StudentRemoveSubject
+
+@{
+    ViewBag.Title = "RemoveSubjectFromStudent";
+    Layout = "~/Views/Shared/_BTGLayout.cshtml";
+}
+
+<h2>Remove Subject From Student</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(e => e.StudentId)    
+    <div class="form-horizontal">
+        <h4>Choose a subject to remove from @Model.FirstName.</h4>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.SubjectId, "SubjectId", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("SubjectId", null, "-- Choose subject to remove -- ", htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.SubjectId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+        <div class=" form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Add Subject" />
+                @Html.ActionLink("Back to students", "Index")
+            </div>
+        </div>
+    </div>
+}

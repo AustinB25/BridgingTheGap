@@ -8,9 +8,18 @@
 <h2>All Available roles</h2>
 
 
-<p class="col-md-6"> 
+<p class="col-md-6">
     @Html.ActionLink("Create New", "Create")
 </p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+        <button type="button" class=" close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
 <p class="col-md-6">
     @Html.ActionLink("Assign Role to User", "RegisterRole", "Account")
 </p>
@@ -27,14 +36,14 @@
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
-        </th>        
+        </th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>
                 @Html.DisplayFor(Model => item.Name)
-            </td>         
+            </td>
         </tr>
     }
 </table>

@@ -1,4 +1,4 @@
-﻿ using BridgingTheGap.Data;
+﻿using BridgingTheGap.Data;
 using BridgingTheGap.Models;
 using BridgingTheGap.Services;
 using Microsoft.AspNet.Identity;
@@ -20,10 +20,9 @@ namespace BridgingTheGap.WebMVC.Controllers
             List<TutorListItem> orderedList = tutorList.OrderBy(t => t.FullName).ToList();
             return View(orderedList);
         }
-
         //Get: Tutor/Create
         public ActionResult Create()
-        {                  
+        {
             return View();
         }
         //Post: Tutor/Create
@@ -36,7 +35,7 @@ namespace BridgingTheGap.WebMVC.Controllers
             //Bring in tutor service 
             var tService = CreateTutorService();
             //Check to make sure bool for Create method returns true
-            if (tService.CreateTutor( model))
+            if (tService.CreateTutor(model))
             {
                 //If so Save this string in temp data to be taken back to the view
                 TempData["SaveResult"] = "Your tutor was created.";
@@ -46,7 +45,6 @@ namespace BridgingTheGap.WebMVC.Controllers
             //If the tutor could not be created give the user the model back
             return View(model);
         }
-
         //Get: Tutor/Details{id}
         public ActionResult Details(int id)
         {
@@ -109,7 +107,7 @@ namespace BridgingTheGap.WebMVC.Controllers
                 return RedirectToAction("Index");
             }
             return View(editModel);
-        }     
+        }
         //Get: Tutor/AddSubjectToTutor{id}
         [HttpGet]
         public ActionResult AddSubjectToTutor(int id)
@@ -119,7 +117,7 @@ namespace BridgingTheGap.WebMVC.Controllers
             //Create SelectList for the Subjects in database and put them in the ViewBag foir the view
             ViewBag.SubjectId = new SelectList(subService.GetSubjects().ToList(), "SubjectId", "Name");
             //Create tutor service to interact with tutor data table
-            var tutorService = CreateTutorService();                        
+            var tutorService = CreateTutorService();
             //Go get the tutor we are going to add a subject to using service
             var tutor = tutorService.GetTutorById(id);
             var entity =
@@ -138,11 +136,48 @@ namespace BridgingTheGap.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult AddSubjectToTutor(int subjectId, TutorDetails tutorModel)
         {
-            if (!ModelState.IsValid) return View(tutorModel);            
+            if (!ModelState.IsValid) return View(tutorModel);
             var tService = CreateTutorService();
             if (tService.AddSubjectToTutor(subjectId, tutorModel.TutorId))
             {
                 TempData["SaveResult"] = " The subject was added to the tutor ";
+                return RedirectToAction("Index", "Tutor");
+            }
+            return View(tutorModel);
+        }
+        //Get: Tutor/RemoveSubjectFromTutor/{id}
+        [HttpGet]
+        public ActionResult RemoveSubjectFromTutor(int id)
+        {
+            //Create Subect service to interact with subect data table
+            var subService = CreateSubjectService();
+            //Create SelectList for the Subjects in database and put them in the ViewBag foir the view
+            //Create tutor service to interact with tutor data table
+            var tutorService = CreateTutorService();
+            //Go get the tutor we are going to remove the subject from using  the service
+            var tutor = tutorService.GetTutorById(id);
+            var entity =
+                new TutorRemoveSubject
+                {
+                    TutorId = tutor.TutorId,
+                    FirstName = tutor.FirstName,
+                    LastName = tutor.LastName,
+                    Subjects = tutor.Subjects
+                };
+            ViewBag.SubjectId = new SelectList(entity.Subjects, "SubjectId", "Name");
+            //Return the AddSubjectToTutor View with the tutorDetail
+            return View(entity);
+        }
+        //Post: Tutor/AddSubjectToTutor/{id}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult RemoveSubjectFromTutor(TutorRemoveSubject tutorModel)
+        {
+            if (!ModelState.IsValid) return View(tutorModel);
+            var tService = CreateTutorService();
+            if (tService.RemoveSubjectFromTutor(tutorModel.SubjectId, tutorModel.TutorId))
+            {
+                TempData["SaveResult"] = " The subject was removed to the tutor ";
                 return RedirectToAction("Index", "Tutor");
             }
             return View(tutorModel);
@@ -153,6 +188,7 @@ namespace BridgingTheGap.WebMVC.Controllers
             var subjectService = new SubjectService(userId);
             return subjectService;
         }
+
         private TutorService CreateTutorService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

@@ -122,10 +122,27 @@ namespace BridgingTheGap.Services
                 var subjectEntity =
                     ctx
                     .Subjects
-                    .Single(e => e.OwnerId == _userId && e.SubjectId == subjectId);
+                    .Single(e => e.SubjectId == subjectId);
                 tutorEntity.Subjects.Add(subjectEntity);
                 subjectEntity.Tutors.Add(tutorEntity);
-                return ctx.SaveChanges() >= 1;
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        public bool RemoveSubjectFromTutor(int subjectId, int tutorId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var tutorEntity =
+                    ctx
+                    .Tutors
+                    .Single(e => e.TutorId == tutorId);
+                var subjectEntity =
+                    ctx
+                    .Subjects
+                    .Single(e => e.SubjectId == subjectId);
+                tutorEntity.Subjects.Remove(subjectEntity);
+                subjectEntity.Tutors.Remove(tutorEntity);
+                return ctx.SaveChanges() == 1;
             }
         }
     }

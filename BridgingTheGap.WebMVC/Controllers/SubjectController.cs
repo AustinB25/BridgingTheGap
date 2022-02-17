@@ -57,7 +57,7 @@ namespace BridgingTheGap.WebMVC.Controllers
                 {
                     SubjectId = modelDetails.SubjectId,
                     Name = modelDetails.Name,
-                    StudentsInClass = modelDetails.StudentsInClass
+                    Students = modelDetails.Students
                 };
             return View(model);
         }
@@ -105,6 +105,21 @@ namespace BridgingTheGap.WebMVC.Controllers
             }
             return View(editModel);
         }
+        //Get: Subject/GetAllStudentsInSubject/{id}
+        [HttpGet]
+        public ActionResult ViewAllStudentsInSubject(int id)
+        {
+            var service = CreateSubjectService();
+            var subject = service.GetSubjectById(id);
+            var entity =
+                new SubjectDetail
+                {
+                    SubjectId = subject.SubjectId,
+                    Name = subject.Name,
+                    Students = subject.Students
+                };
+            return View(entity);
+        }        
         public SubjectService CreateSubjectService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

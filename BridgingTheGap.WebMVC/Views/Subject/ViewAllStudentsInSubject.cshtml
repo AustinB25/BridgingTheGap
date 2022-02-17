@@ -1,0 +1,29 @@
+﻿@model BridgingTheGap.Models.SubjectDetail
+
+@{
+    ViewBag.Title = "ViewAllStudentsInSubject";
+    Layout = "~/Views/Shared/_BTGLayout.cshtml";
+}
+
+<h2>View All Students In Subject</h2>
+
+<h4>Students in @Model.Name</h4>
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th class="col-md-4">Student Id</th>
+            <th class="col-md-4">Student Name</th>            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model.Students)
+        {
+            <tr>
+                <td>@student.StudentId</td>
+                <td>@student.FullName</td>                
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.ActionLink("Back to Subjects", "Index", "Subject") |
+@Html.ActionLink("Add Student",)

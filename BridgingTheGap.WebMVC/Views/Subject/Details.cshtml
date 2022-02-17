@@ -14,27 +14,27 @@
         <dt>
             @Html.DisplayNameFor(model => model.SubjectId)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.SubjectId)
-        </dd>        
-
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Name)
         </dd>
-
         <dt>
-            @Html.DisplayNameFor(model => model.StudentsInClass)
+            @Html.DisplayNameFor(model => model.Students)
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.StudentsInClass)
+            @Html.DisplayFor(model => model.Students.Count)
         </dd>
-
+        <dt>
+            @Html.DisplayNameFor(model => model.Tutors)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tutors.Count)
+        </dd>
     </dl>
 </div>
 <p>

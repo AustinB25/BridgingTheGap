@@ -85,6 +85,8 @@ C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\Brid
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Models.pdb
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Services.pdb
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\BridgingTheGap.Services.dll.config
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\EntityFramework.xml
+C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\EntityFramework.SqlServer.xml
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\System.Web.Helpers.xml
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\System.Web.Mvc.xml
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\System.Web.Optimization.xml
@@ -94,8 +96,6 @@ C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\Syst
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\System.Web.WebPages.Razor.xml
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\Newtonsoft.Json.xml
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\Antlr3.Runtime.pdb
-C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\EntityFramework.xml
-C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\EntityFramework.SqlServer.xml
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\kpak2\source\repos\BridgingTheGap.WebMVC\BridgingTheGap.WebMVC\bin\Microsoft.AspNet.Identity.EntityFramework.xml

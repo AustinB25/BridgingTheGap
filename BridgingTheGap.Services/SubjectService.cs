@@ -59,7 +59,8 @@ namespace BridgingTheGap.Services
                     {
                         SubjectId = entity.SubjectId,
                         Name = entity.Name,
-                        StudentsInClass = entity.Students.Count()
+                        Students = entity.Students.ToList(),
+                        Tutors = entity.Tutors.ToList()
                     };
                 return model;
             }

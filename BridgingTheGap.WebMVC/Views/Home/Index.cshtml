@@ -5,28 +5,35 @@
 
 <div class="jumbotron">
     <h1>Bridging The Gap</h1>
-    <p class="lead">The app for all of your tutoring needs!</p>
-    <p><a href="~/Home/About" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+    <p class="lead">The app for all of your tutoring needs!</p>    
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<div class="row justify-content-evenly">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h2 class="card-title">Tutors</h2>
+            <h6 class="card-subtitle mb-2 text-muted">Do you need help studying for a test or help on an assignment?</h6>
+            <hr />
+            <p class="card-text">There is a wide range of help available for you here. Find a tutor that can help you with your studying needs.</p>
+            <button class="btn btn-dark">@Html.ActionLink("View Tutors", "Index", "Tutor")</button>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h2 class="card-title">Students</h2>
+            <h6 class="card-subtitle mb-2 text-muted">Are you looking for a study buddy?</h6>
+            <hr />
+            <p class="card-text">There are plenty of other students with similar questions and study needs as you. All you have to do is go out and find them.</p>
+            <button class="btn btn-dark">@Html.ActionLink("View Students", "Index", "Student")</button>
+        </div>
+    </div>  
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h2 class="card-title">Subjects</h2>
+            <h6 class="card-subtitle mb-2 text-muted">Looking to expand your knowledge?</h6>
+            <hr />
+            <p class="card-text">View the broad range of subjects that our tutors offer to students. We hope find find something new to learn about today!</p>
+            <button class="btn btn-dark">@Html.ActionLink("View Subjects", "Index", "Subject")</button>
+        </div>
     </div>
 </div>
